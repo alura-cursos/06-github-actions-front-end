@@ -1,0 +1,26 @@
+name: "CI - Integração Continua"
+
+on:
+  # Ativa esse fluxo de trabalho para cada push/pull que acontecer apontando para a bracnh main
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+# Uma execução de fluxo de trabalho é composta por um ou mais trabalhos que podem ser executados sequencialmente ou em paralelo
+# Definindo o que quero executar:
+
+jobs:
+  # Este fluxo de trabalho contém um único trabalho chamado "example" até o momento
+  example:
+    # O tipo de executor no qual o trabalho será executado (computador):
+    runs-on: ubuntu-latest
+
+    # Etapas representam uma sequência de tarefas que serão executadas como parte do trabalho
+    steps:
+      # Verifica seu repositório em $GITHUB_WORKSPACE, para que seu trabalho possa acessá-lo
+      - uses: actions/checkout@v3
+
+      # Executa um único comando usando o shell runnerss
+      - name: Run a one-line script
+        run: echo Hello, world!
