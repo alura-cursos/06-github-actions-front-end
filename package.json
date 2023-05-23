@@ -1,0 +1,43 @@
+{
+  "name": "06-github-actions-front-end",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "- ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "rm -rf build && next build && output: export && mv ./out ./build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "deploy:prod": "yarn deploy/staging --prod",
+    "deploy:staging": "yarn build && vercel ./build --yes --token=$VERCEL_TOKEN",
+    "deploy:preview": "node ./scripts/pullRequestPreview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alura-cursos/06-github-actions-front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alura-cursos/06-github-actions-front-end/issues"
+  },
+  "homepage": "https://github.com/alura-cursos/06-github-actions-front-end#readme",
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "login": "^0.8.0",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "vercel": "^29.4.0"
+  }
+}
