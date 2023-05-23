@@ -3,5 +3,5 @@ export default function AboutScreen() {
     <div>
       <h1>Sobre</h1>
     </div>
-  )
+  );
 }
