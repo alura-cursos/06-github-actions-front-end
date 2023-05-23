@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
-    "build": "rm -rf build && next build && next export && mv ./out ./build",
+    "build": "rm -rf build && next build && output: export && mv ./out ./build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "deploy:prod": "yarn build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN --prod"
+    "deploy:prod": "yarn build && vercel ./build --yes --token=$VERCEL_TOKEN --prod"
   },
   "repository": {
     "type": "git",
