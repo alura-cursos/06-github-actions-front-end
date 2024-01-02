@@ -1,18 +1,26 @@
 {
-  "name": "06-github-actions-front-end",
+  "name": "CI-CD",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Mario Souto <13791385+omariosouto@users.noreply.github.com>",
+  "author": "Arthur-Avila <arthurpro295@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
-  },
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf build && next export && mv ./out ./build",
     "start": "next start",
-    "lint": "next lint"  
+    "lint": "next lint",
+    "build": " rmdir build /s && next build && ren out build ",
+    "dbuild":"next build && ren out build"
+  },
+  "dependencies": {
+    "next": "13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.10.6",
+    "@types/react": "^18.2.46",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4",
+    "typescript": "5.3.3"
   }
 }
